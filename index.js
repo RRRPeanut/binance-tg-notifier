@@ -20,7 +20,7 @@ const ComparisonCondition = {
 const conditions = [];
 
 // Создаем экземпляр телеграм-бота с указанием токена
-const bot = new TelegramBot('', { polling: true });
+const bot = new TelegramBot(procces.env.TG_BOT_ID, { polling: true });
 
 // Функция для обработки команды /addCondition
 bot.onText(/\/addCondition (.+)/, (msg, match) => {
